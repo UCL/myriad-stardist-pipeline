@@ -1,0 +1,10 @@
+csbdeep>=0.8.1
+gputools>=0.2.16
+matplotlib>=3.9.4
+numpy<2
+scikit-image>=0.24.0
+seaborn>=0.13.2
+stardist>=0.9.1
+tensorflow>=2.18.1
+tifffile>=2024.8.30
+tqdm>=4.67.1
