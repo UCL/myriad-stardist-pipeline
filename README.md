@@ -27,7 +27,19 @@ source venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Transfer required models and images to a subdirectories `models` and `images` within `myriad-stardist-pipeline`.
+Transfer required models and images to subdirectories `models` and `images` within `myriad-stardist-pipeline`. The directories should have the following structure:
+
+```
+.
+├── images
+│   ├── image_1.tif
+│   ├── image_2.tif
+│   └── ...
+└── models
+    ├── model_1
+    ├── model_2
+    └── ...
+```
 
 Submit job script by running
 
