@@ -24,7 +24,7 @@ Activate environment and install required dependencies
 
 ```bash
 source venv/bin/activate
-module load python3/3.11
+python -m pip install -r requirements.txt
 ```
 
 Transfer required models and images to a subdirectories `models` and `images` within `myriad-stardist-pipeline`.
