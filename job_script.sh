@@ -41,14 +41,16 @@ mkdir outputs
 
 # Run pipeline script using Python in activated virtual environment passing in path to
 # directory containing input data and path to directory to write outputs to
-echo "Running pipeline script..."
+echo "$(date -Is): Running pipeline script..."
+echo "-------------------------------------------------------------------------------"
 python $PROJECT_DIR/compute_stardist_predictions.py \
   --model-dir $PROJECT_DIR/models \
   --image-dir $PROJECT_DIR/images \
   --output-dir outputs
-echo "...done."
+echo "-------------------------------------------------------------------------------"
+echo "$(date -Is): ...done."
 
 # Copy script outputs back to scratch space under a job ID specific subdirectory
-echo "Copying analysis outputs to scratch space..."
+echo "$(date -Is): Copying analysis outputs to scratch space..."
 rsync -a outputs/ $HOME/Scratch/outputs_$JOB_ID/
-echo "...done"
+echo "$(date -Is): ...done"
