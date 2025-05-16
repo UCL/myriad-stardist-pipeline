@@ -2,12 +2,12 @@
 
 # Job script to run a StarDist pipeline on a GPU node on Myriad
 
-# Request 2 hours of wallclock time (format hours:minutes:seconds).
-#$ -l h_rt=2:0:0
+# Request 6 hours of wallclock time (format hours:minutes:seconds).
+#$ -l h_rt=6:0:0
 
-# Request 8 gigabyte of RAM for each core/thread 
+# Request 4 gigabyte of RAM for each core/thread 
 # (must be an integer followed by M, G, or T)
-#$ -l mem=8G
+#$ -l mem=4G
 
 # Request 10 gigabyte of TMPDIR space
 #$ -l tmpfs=10G
@@ -18,12 +18,14 @@
 # Set the name of the job.
 #$ -N stardist-pipeline
 
-# Request 1 cores.
-#$ -pe smp 1
+# Request 8 cores.
+#$ -pe smp 8
 
-# Load python3 module - this must be the same version as loaded when creating and
+# Load modules - these must be the same versions as loaded when creating and
 # installing dependencies in the virtual environment
-module load python3/3.9
+module load compilers/gnu/10.2.0
+module load openblas/0.3.13-openmp/gnu-10.2.0
+module load tensorflow/2.11.0/gpu
 
 # Define a local variable pointing to the project directory in your home directory
 PROJECT_DIR=$HOME/myriad-stardist-pipeline
