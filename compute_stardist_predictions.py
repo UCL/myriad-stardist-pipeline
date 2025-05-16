@@ -63,9 +63,10 @@ def compute_and_save_model_label_predictions(
             labels, _ = model.predict_instances(image, n_tiles=n_tiles_zyx)
             log_function("    ...done")
             log_function(f"   There are {np.max(labels)} labels in {image_path.stem}")
-            output_path = model_output_dir / (image_path.stem + "_labels.npy")
-            log_function(f"   Saving predicted labels to {output_path}")
-            np.save(output_path, labels)
+            output_path = model_output_dir / (image_path.stem + "_labels.npz")
+            log_function(f"   Saving predicted labels to {output_path}...")
+            np.savez_compressed(output_path, labels=labels)
+            log_function(f"   ...done")
 
 
 def parse_arguments():
