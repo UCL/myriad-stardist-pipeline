@@ -23,6 +23,7 @@
 
 # Load modules - these must be the same versions as loaded when creating and
 # installing dependencies in the virtual environment
+module purge
 module load compilers/gnu/10.2.0
 module load openblas/0.3.13-openmp/gnu-10.2.0
 module load tensorflow/2.11.0/gpu
