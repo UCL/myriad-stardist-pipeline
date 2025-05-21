@@ -81,7 +81,8 @@ ls
 
 You should see the two `.zip` files you just transferred.
 
-N.B. You can also check which folder/directory you're currently in by running the `pwd` command.
+> [!TIP]
+> You can also check which folder/directory you're currently in by running the `pwd` command.
 
 Next, you need to move the zipped files to the `myriad-stardist-pipeline` directory you created earlier
 using the [`mv` command](https://swcarpentry.github.io/shell-novice/03-create.html#moving-files-and-directories
