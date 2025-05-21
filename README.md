@@ -64,8 +64,8 @@ You can then [run commands in the shell](https://swcarpentry.github.io/shell-nov
 to transfer them to your Myriad `Scratch` space using `scp`:
 
 ```bash
-scp models.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/Scratch/
-scp images.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/Scratch/
+scp models.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/myriad-stardist-pipeline/
+scp images.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/myriad-stardist-pipeline/
 ```
 
 > [!NOTE]
