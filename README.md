@@ -75,7 +75,7 @@ scp images.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/myriad-stardist-pipeline/
 [ls command](https://swcarpentry.github.io/shell-novice/02-filedir.html):
 
 ```bash
-cd ~/Scratch
+cd ~/myriad-stardist-pipeline
 ls
 ```
 
