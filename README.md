@@ -3,7 +3,8 @@
 Pipeline for computing image segmentations using [StarDist](https://github.com/stardist/stardist) 
 on UCL high performance computing system [Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/).
 
-N.B. make sure you're connected to the UCL network when accessing Myriad either via a UCL VPN or on campus
+> [!NOTE]
+> Make sure you're connected to the UCL network when accessing Myriad either via a UCL VPN or on campus. Alternatively you can [first connect to the UCL SSH gateway](https://www.rc.ucl.ac.uk/docs/howto/#logging-in-from-outside-the-ucl-firewall).
 via UCL Eduroam.
 
 ## How to run pipeline
