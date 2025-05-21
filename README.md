@@ -3,6 +3,9 @@
 Pipeline for computing image segmentations using [StarDist](https://github.com/stardist/stardist) 
 on UCL high performance computing system [Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/).
 
+N.B. make sure you're connected to the UCL network when accessing Myriad either via a UCL VPN or on campus
+via UCL Eduroam.
+
 ## How to run pipeline
 
 Clone this repository to your home directory on Myriad
@@ -38,7 +41,8 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-Transfer required models and images to subdirectories `models` and `images` within `myriad-stardist-pipeline`. The directories should have the following structure:
+Transfer required models and images to subdirectories `models` and `images` within `myriad-stardist-pipeline` with
+instructions below. The directories should have the following structure:
 
 ```
 .
@@ -52,9 +56,62 @@ Transfer required models and images to subdirectories `models` and `images` with
     └── ...
 ```
 
+**On your local machine**, you can arrange your files into the above directory structure and zip/compress them
+as normal.
+
+You can then [run commands in the shell](https://swcarpentry.github.io/shell-novice/index.html#open-a-new-shell)
+to transfer them to your Myriad `Scratch` space using `scp`:
+
+```bash
+scp models.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/Scratch/
+scp images.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/Scratch/
+```
+
+N.B. `ucaXXXX` is your UCL username and this command is similar to `ssh` command you used to connect to Myriad.
+
+**On myriad**, you can check the contents of your `Scratch` space and any other folder by running the
+[ls command](https://swcarpentry.github.io/shell-novice/02-filedir.html):
+
+```bash
+cd ~/Scratch
+ls
+```
+
+You should see the two .zip folders you just transferred.
+
+N.B. You can also check which folder/directory you're currently in by running the `pwd` command.
+
+Next, you need to move the zipped files to the `myriad-stardist-pipeline` directory you created earlier
+using the [`mv` command](https://swcarpentry.github.io/shell-novice/03-create.html#moving-files-and-directories
+):
+
+```bash
+cd ~
+mv ~/Scratch/models.zip ~/myriad-stardist-pipeline/
+mv ~/Scratch/images.zip ~/myriad-stardist-pipeline/
+```
+
+Unzip the files in your `myriad-stardist-pipeline` directory using the `unzip` command:
+
+```bash
+cd ~/myriad-stardist-pipeline
+unzip models.zip
+unzip images.zip
+```
+
+You can check the contents of the `models` and `images` directories to confirm that the files have been unzipped correctly:
+
+```bash
+cd models
+ls
+cd ../images
+ls
+```
+
 Submit job script by running
 
 ```bash
+cd ~
 qsub job_script.sh
 ```
 
