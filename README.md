@@ -78,7 +78,7 @@ cd ~/Scratch
 ls
 ```
 
-You should see the two .zip folders you just transferred.
+You should see the two `.zip` files you just transferred.
 
 N.B. You can also check which folder/directory you're currently in by running the `pwd` command.
 
