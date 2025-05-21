@@ -114,7 +114,7 @@ ls
 Submit job script by running
 
 ```bash
-cd ~
+cd ~/myriad-stardist-pipeline
 qsub job_script.sh
 ```
 
