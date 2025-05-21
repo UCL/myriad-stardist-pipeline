@@ -88,7 +88,6 @@ You should see the two `.zip` files you just transferred.
 Unzip the files in your `myriad-stardist-pipeline` directory using the `unzip` command:
 
 ```bash
-cd ~/myriad-stardist-pipeline
 unzip models.zip
 unzip images.zip
 ```
