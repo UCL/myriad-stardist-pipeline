@@ -71,7 +71,7 @@ scp images.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/Scratch/
 > [!NOTE]
 > `ucaXXXX` is your UCL username and this command is similar to `ssh` command you used to connect to Myriad.
 
-**On myriad**, you can check the contents of your `Scratch` space and any other folder by running the
+**On Myriad**, you can check the contents of your `myriad-stardist-pipeline` directory and any other folder by running the
 [ls command](https://swcarpentry.github.io/shell-novice/02-filedir.html):
 
 ```bash
