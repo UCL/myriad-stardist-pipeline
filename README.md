@@ -61,7 +61,7 @@ instructions below. The directories should have the following structure:
 as normal.
 
 You can then [run commands in the shell](https://swcarpentry.github.io/shell-novice/index.html#open-a-new-shell)
-to transfer them to your Myriad `Scratch` space using `scp`:
+to transfer them to the `myriad-stardist-pipeline` directory in your Myriad home directory using `scp`:
 
 ```bash
 scp models.zip ucaXXXX@myriad.rc.ucl.ac.uk:~/myriad-stardist-pipeline/
