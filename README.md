@@ -4,8 +4,7 @@ Pipeline for computing image segmentations using [StarDist](https://github.com/s
 on UCL high performance computing system [Myriad](https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/).
 
 > [!NOTE]
-> Make sure you're connected to the UCL network when accessing Myriad either via a UCL VPN or on campus. Alternatively you can [first connect to the UCL SSH gateway](https://www.rc.ucl.ac.uk/docs/howto/#logging-in-from-outside-the-ucl-firewall).
-via UCL Eduroam.
+> Make sure you're connected to the UCL network when accessing Myriad either via a UCL VPN or on campus via UCL Eduroam. Alternatively you can [first connect to the UCL SSH gateway](https://www.rc.ucl.ac.uk/docs/howto/#logging-in-from-outside-the-ucl-firewall).
 
 ## How to run pipeline
 
@@ -83,7 +82,6 @@ You should see the two `.zip` files you just transferred.
 
 > [!TIP]
 > You can also check which folder/directory you're currently in by running the `pwd` command.
-```
 
 Unzip the files in your `myriad-stardist-pipeline` directory using the `unzip` command:
 
